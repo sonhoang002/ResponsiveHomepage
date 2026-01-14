@@ -1,0 +1,53 @@
+main {
+  padding: 0px 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header-text {
+  align-items: center;
+  font-size: clamp(2em, 5vw, 4rem);
+}
+
+/* Project Container */
+.project-containers {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, minmax(200px, 1fr));
+  gap: 3%;
+  justify-content: space-between;
+}
+
+.project-components-container {
+  display: grid;
+  grid-template-rows: 1fr 40px 70px;
+  box-shadow: 2px 2px 8px black;
+}
+
+.screenshot {
+  display: flex;
+  background-color: red;
+  height: 20vw;
+
+  font-size: 3.5em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: inset 1px 1px 10px black;
+}
+
+.project-name-and-links {
+  padding: 5% 2%;
+  display: grid;
+  grid-template-columns: 1fr 30px 30px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.project-name-and-links img {
+  height: 20px;
+}
+
+.description-text {
+  padding: 5% 2%;
+}
