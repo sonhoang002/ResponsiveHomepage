@@ -1,5 +1,6 @@
 main {
   padding: 0px 5%;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -11,29 +12,34 @@ main {
 
 /* Project Container */
 .project-containers {
+  flex-grow: 1;
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(3, minmax(200px, 1fr));
-  gap: 3%;
+  grid-template: repeat(2, 1fr) / repeat(3, minmax(auto, 1fr));
+  row-gap: 6%;
+  column-gap: 3%;
   justify-content: space-between;
 }
 
 .project-components-container {
   display: grid;
-  grid-template-rows: 1fr 40px 70px;
+  grid-template-rows: 60% 10% 30%;
   box-shadow: 2px 2px 8px black;
 }
 
 .screenshot {
   display: flex;
   background-color: red;
-  height: 20vw;
-
-  font-size: 3.5em;
+  height: clamp(100%, 15vw, 470px);
+  font-size: clamp(24px, 4vw, 70px);
   text-align: center;
   justify-content: center;
   align-items: center;
 
   box-shadow: inset 1px 1px 10px black;
+}
+
+.name {
+  font-size: 1.3em;
 }
 
 .project-name-and-links {
@@ -50,4 +56,14 @@ main {
 
 .description-text {
   padding: 5% 2%;
+}
+
+@media (max-width: 1000px) {
+  .project-containers {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3%;
+    justify-content: space-between;
+  }
 }
