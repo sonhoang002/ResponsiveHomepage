@@ -73,3 +73,14 @@ footer {
   height: 30px;
   padding-right: 6px;
 }
+
+@media (max-width: 1000px) {
+  .contact-me-header {
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  .specific-contact-info-container {
+    font-size: 1.5em;
+  }
+}
